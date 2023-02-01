@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+display task here
+
+<table border="1">
+    <tr>
+        <th>Left</th>
+        <th>Right</th>
+        <th>Operator</th>
+        <th>StudentName</th>
+    </tr>
+    {% for i in data %}
+    <tr>
+     <td>{{ i.Left }}</td>
+     <td>{{ i.Right }}</td>
+     <td>{{ i.Operator }}</td>
+     <td>{{ i.Student_id }}</td>
+     <td><a href="{% url 'solve' i.id %}">Solve</a> </td>
+    </tr>
+    {% endfor %}
+
+</table>
+<h3>{{sol}} </h3>
+</body>
+</html>
